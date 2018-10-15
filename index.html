@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Local CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/timerStopwatch.css">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/timerApple.css"> -->
+	
+<!-- COUNT UP TIMER -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+
+    <title>Daily Productivity App</title>
+  </head>
+
+
+
+ <body onload="digi(), digi1()">
+  	
+<!-- CONTAINER -->
+  	<div class="container text-center"><br>
+
+<div class="row">
+
+	<!-- TODAY'S TIME -->
+
+	<div class="col-lg-4 col-md-6 col-sm-10"> 
+		<div id="time" style="padding-bottom:1px;"></div>
+		<div id="time1" style="padding-bottom:1px;"></div>
+	<div id="countUpTimer" style="padding-bottom:1px;">00:00:00</div>
+	</div>
+
+
+	<!-- TODAY'S DATE -->
+	<div class="col-lg-8 col-md-6 col-sm-12">
+
+			<div id="date" style="padding-bottom:1px;"></div>
+
+		<!-- STOPWATCH -->
+		<div class="stopwatch" style="padding-bottom:10px;"><div id="timerBackground">
+		  	<p style='font-size:1.3em;color:white;font-weight:200;margin:0px;padding-top:10px;'>Timer<p>
+			<span class="time">00:00:00:00</span>
+		  </div>
+		  
+		  <button class="start" style='border-radius:5px'>Start</button>
+		  <button class="pause" style='border-radius:5px'>Stop</button>
+		  <button class="reset" style='border-radius:5px'>Reset</button>
+		  <button style="display: none;" class="lap">Lap</button>
+		</div>
+
+	</div>
+
+		
+
+		<div class="lapsBox">
+		  <ul class="laps">
+
+		  </ul>
+		  <button class="clear">Clear Laps</button>
+		</div>
+
+		
+		<!-- STOPWATCH -->
+
+</div>
+
+
+
+
+
+
+<!-- TIMER APPLE -->
+<!--
+
+<form class="container1">
+  <input type="radio" id="init" name="control" checked="checked">
+  <input type="radio" id="stop" name="control">
+  <input type="radio" id="start" name="control">
+  <input type="reset" id="reset" name="control">
+  <input type="checkbox" id="lap_1" name="lap">
+  <input type="checkbox" id="lap_2" name="lap">
+  <input type="checkbox" id="lap_3" name="lap">
+  <input type="checkbox" id="lap_4" name="lap">
+
+  <time><i></i><b></b><i></i><b></b><i></i></time>
+
+      <label for="reset">Reset</label>
+
+  <div class="controls">
+    <label for="stop">Stop</label>
+    <label for="start">Start</label>
+    <label for="reset">Reset</label>
+
+-->
+
+<!--     <label for="lap_1">Lap</label>
+    <label for="lap_2">Lap</label>
+    <label for="lap_3">Lap</label>
+    <label for="lap_4">Lap</label> -->
+  <!-- </div> -->
+
+
+
+<!-- 
+  <ul class="laps">
+    <li>
+      <time><i></i><b></b><i></i><b></b><i></i></time>
+    </li>
+    <li>
+      <time><i></i><b></b><i></i><b></b><i></i></time>
+    </li>
+    <li>
+      <time><i></i><b></b><i></i><b></b><i></i></time>
+    </li>
+    <li>
+      <time><i></i><b></b><i></i><b></b><i></i></time>
+    </li>
+  </ul>
+
+ -->
+<!-- </form> -->
+
+
+<!-- END STOPWATCH -->
+
+
+
+
+
+
+<!-- TABLE -->
+
+
+
+
+
+<br>
+
+
+
+<div id="tableBackground">
+	<table class="table table-bordered table-sm text-center align-middle table-striped">
+		  
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Task</th>
+		      <th scope="col">Started</th>
+		      <th scope="col">Finished</th>
+			  <th scope="col">Total Time</th>
+		    </tr>
+		  </thead>
+	  
+	  <tbody>
+	    
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>
+	      	<div class="input-group input-group-sm">
+			<input id="input" type="text" class="form-control border-0 rounded-0 text-center" placeholder="Item" aria-label="Username" aria-describedby="basic-addon1">
+			</div>
+		</td>
+	      <td id="punchin"><div class="input-group input-group-sm">
+			<input id="input" type="text" class="form-control border-0 rounded-0 text-center" placeholder="HH:MM" aria-label="Username" aria-describedby="basic-addon1">
+			</div></td>
+		  <td id="punchout"><div class="input-group input-group-sm">
+			<input id="input" type="text" class="form-control border-0 rounded-0 text-center" placeholder="HH:MM" aria-label="Username" aria-describedby="basic-addon1">
+			</div></td>
+		  <td id="difference"><div class="input-group input-group-sm">
+			<input id="input" type="text" class="form-control border-0 rounded-0 text-center" placeholder="hours, minutes" aria-label="Username" aria-describedby="basic-addon1">
+			</div></td>
+	    </tr>
+	  </tbody>
+	 </table>
+	</div>
+
+
+
+<!-- BUTTON -->
+
+<!-- <button style ="border-radius: 30px" class="btn btn-info btn-lg glyphicon glyphicon-plus" id="newRowButton">
+          <span class="glyphicon glyphicon-plus"></span>+</button> -->
+
+<!-- BUTTON -->
+
+
+</div> <!-- Close Container -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript CDN -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+	<!-- LOCAL CURRENT TIME.JS -->
+	<script type="text/javascript" src="assets/js/currentTime.js"></script>
+
+	<!-- LOCAL APPLETIMER.JS -->
+<!-- 	<script type="text/javascript" src="assets/js/timerApple.js"></script> -->
+
+	<!-- MOMENT CDN -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+	<!-- LOCAL MOMENT.JS -->
+	<script type="text/javascript" src="assets/js/todaysDate.js"></script>
+
+	<!-- LOCAL TIMERCLICKS.JS -->
+	<script type="text/javascript" src="assets/js/timerClicks.js"></script>
+
+	<!-- LOCAL TIMERSTOPWATCH.JS -->
+	<script type="text/javascript" src="assets/js/timerStopwatch.js"></script>
+
+	<!-- LOCAL SCRIPT.JS -->
+	<script type="text/javascript" src="assets/js/table.js"></script>             
+
+
+  </body>
+</html>

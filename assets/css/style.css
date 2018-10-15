@@ -1,0 +1,119 @@
+body {
+    background-image: url('../img/mountains.jpg');
+    /*background-color: white; */
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*#blackBackground{
+    background-color: #0F0F0F;
+}*/
+
+#date, #time, #time1, #countUpTimer {
+  font-size:3em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background-color: #0F0F0F;
+  color:white;
+  border-radius: 10px;
+  margin:10px;
+  opacity: .95;
+}
+
+.stopwatch{
+    background-color: #0F0F0F;
+      border-radius: 10px;
+}
+
+.start, .pause, .reset{
+  margin-bottom: 20px;
+}
+
+/*#time1{
+  font-size:4em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background-color: #0F0F0F;
+  color:white;
+  border-radius: 10px;
+  margin: 0px;*/
+  /*opacity: .95;*/
+/*}*/
+
+#currentTime{
+	font-size:1em;
+}
+
+/*Table Head*/
+th{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 325;
+}
+
+#tableBackground{
+  background-color: white;
+}
+
+#input{
+	background-color: #f2f2f2;
+}
+
+
+
+/*
+.stopwatch {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 12vw;
+  /*height: 100%;*/
+  /*line-height: 100vh;*/
+ 
+/*
+  text-align: center;
+  width:100%;
+  background-color: white;
+  border-radius: 10px;
+  opacity: .95;
+}
+
+
+
+.results {
+  border-color: lime;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stopwatch1, .stopwatch2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*  font-weight: 600;
+  font-size: 15vw;*/
+  /*height: 100%;*/
+  /*line-height: 100vh;*/
+  
+/*
+  text-align: center;
+  width:100%;
+}
+
+
+
+.results1, .results2 {
+  border-color: lime;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*position: absolute;*/
+ 
+/*
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
