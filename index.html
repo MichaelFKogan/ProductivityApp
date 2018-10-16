@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+<!-- FLIPCLOCK CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css">
+
 <!-- Local CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/timerStopwatch.css">
@@ -22,31 +25,43 @@
 
 
 
- <body onload="digi(), digi1()">
+ <body>
   	
 <!-- CONTAINER -->
-<div class="container-fluid text-center" style="min-height:400px"><br>
+<div class="container-fluid text-center">
 
-	<div class="row">
-	<!-- TODAY'S TIME -->
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
-				<div id="time1" style="padding-bottom:1px;"></div>
-				<div id="time" style="padding-bottom:1px;"></div>
-			</div>
-	<!-- TODAY'S DATE -->
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div id="date" style="padding-bottom:1px;"></div>
-				<div id="countUpTimer" style="padding-bottom:1px;">00:00:00</div>
-			</div>
-	</div> <!-- End Row -->
+		<div class="row">
+		<!-- TODAY'S DATE -->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="date" style="padding-bottom:1px;"><p style='font-size:.40em;margin:0px;padding-top:15px;'>Date<p>MMM DD</div>
+		<!-- TIME -->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="currentTime" style="padding-bottom:1px;"><p style='font-size:.40em;margin:0px;padding-top:15px;'>Time<p>00:00:00</div>
+		<!-- LOG IN TIME -->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="logInTime" style="padding-bottom:1px;"><p style='font-size:.40em;margin:0px;padding-top:15px;'>Log In Time<p>00:00:00</div>
+		<!-- TIME PASSED -->
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="countUpTimer" style="padding-bottom:1px;"><p style='font-size:.40em;margin:0px;padding-top:15px;'>Time Passed<p>00:00:00</div>
+		</div> <!-- End Row -->
+
 </div> <!-- End Container -->
 
+
+
+<!-- FLIPCLOCK -->
+
+<!-- <div class="container">
+		<div class="offset-lg-4 clock" style=" margin:auto; min-width:600px" ></div>
+		<div class="your-clock" style="margin-top:40px"></div>
+</div> -->
+
+
+<br>
+
 <!-- INPUT BAR -->
-<div class="container">
+<div class="container text-center">
+	<h1> Task App</h1><br>
 		<div class="input-group mb-3 col-lg-8 offset-lg-2">
 		  <input type="text" class="form-control" placeholder="Enter A Task" aria-label="Enter A Task" aria-describedby="basic-addon2">
 		  <div class="input-group-append">
-		    <button class="btn btn-success" id="add" type="button">+</button>
+		    <button class="btn btn-info" id="add" type="button">Submit</button>
 		  </div>
 		</div>
 </div>
@@ -234,21 +249,25 @@
 
 
 
-	<!-- LOCAL CURRENT TIME.JS -->
-	<script type="text/javascript" src="assets/js/currentTime.js"></script>
 
 	<!-- LOCAL APPLETIMER.JS -->
 <!-- 	<script type="text/javascript" src="assets/js/timerApple.js"></script> -->
 
-	<!-- MOMENT CDN -->
+	<!-- MOMENT CDN JS-->
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 
-	<!-- LOCAL MOMENT.JS -->
+<!-- FLIPCLOCK CDN JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+
+	<!-- LOCAL TODAY'S DATE.JS -->
 	<script type="text/javascript" src="assets/js/todaysDate.js"></script>
 
 	<!-- LOCAL TIMERSTOPWATCH.JS -->
 	<!-- <script type="text/javascript" src="assets/js/timerStopwatch.js"></script> -->
+
+	<!-- LOCAL TIMERSTOPWATCH.JS -->
+	<script type="text/javascript" src="assets/js/flipclock.js"></script>
 
 	<!-- LOCAL TIMERCLICKS.JS -->
 	<script type="text/javascript" src="assets/js/timerClicks.js"></script>
