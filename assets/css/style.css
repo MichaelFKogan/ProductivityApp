@@ -1,9 +1,9 @@
-body {
-    background-image: url('../img/mountains.jpg');
-    /*background-color: white; */
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+body { 
+  background: url('../img/mountains.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*#blackBackground{
@@ -17,13 +17,18 @@ body {
   background-color: #0F0F0F;
   color:white;
   border-radius: 10px;
-  margin:10px;
+        margin-top:10px;
+        margin-bottom:10px;
   opacity: .95;
 }
+
+/*#date{  font-size:2.5em;}*/
 
 .stopwatch{
     background-color: #0F0F0F;
       border-radius: 10px;
+        margin-top:10px;
+        margin-bottom:10px;
 }
 
 .start, .pause, .reset{

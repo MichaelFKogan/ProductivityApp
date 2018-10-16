@@ -5,45 +5,42 @@ https://codepen.io/stevesydney/pen/zKQWPK
 */
 
 
+
 /*html,
 body {
   padding: 0;
   margin: 0;
   background-color: #0F0F0F;
-}*/
+}
 
 * {
   box-sizing: border-box;
-}
+}*/
 
 input,
 label {
   display: none;
 }
 
-
-
-.container1 {
+/*.timerContainer {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin: 10px auto 0;
-/*  width: 90vw;*/
-  min-width: 450px;
-  max-width: 600px;
+  margin: 60px auto 0;
+  width: 90vw;
+  min-width: 300px;
+  max-width: 400px;
   text-align: center;
-  background-color: #0F0F0F;
-  border-radius: 10px;
-}
+}*/
 
 time {
-  font-size: 98px;
+  font-size: 68px;
   height: 1em;
   line-height: 1em;
   display: inline-block;
   overflow: hidden;
   animation-name: none;
   animation-play-state: paused;
-  margin-bottom: 0px;
+  margin-bottom: 60px;
   color: #fff;
 }
 
@@ -54,17 +51,16 @@ time b {
   font-weight: 100;
   animation-name: inherit;
   animation-play-state: inherit;
-  margin-top: 10px
 }
 
-.container1 > time b {
+.timerContainer > time b {
   height: 1em;
   min-width: 0.3em;
   padding-top: 0.3em;
 }
 
-.container1 > time b::before,
-.container1 > time b::after {
+.timerContainer > time b::before,
+.timerContainer > time b::after {
   content: '';
   display: block;
   width: 0.08em;
@@ -119,11 +115,10 @@ time i:nth-of-type(3)::after {
 .controls {
   position: relative;
   height: 80px;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.controls::before {
+/*.controls::before {
   display: none;
   content: '';
   position: absolute;
@@ -134,7 +129,7 @@ time i:nth-of-type(3)::after {
   background-color: #0F0F0F;
   opacity: 0.5;
   z-index: 10;
-}
+}*/
 
 label {
   cursor: pointer;
@@ -168,10 +163,9 @@ label[for="start"],
 label[for="stop"] {
   right: 0;
   left: auto;
+
 }
 
-
-/*
 .laps {
   counter-reset: laps;
   list-style: none;
@@ -218,29 +212,38 @@ label[for="stop"] {
   content: ':';
 }
 
-/* Visible control conditions */
 #start:checked ~ .controls label[for="stop"],
+  {display: block;}
+
+/* Visible control conditions */
+
+#start:checked ~ .controls label[for="stop"],
+#init:checked ~ .controls label[for="reset"],
+#init:checked ~ .controls label[for="lap_1"],
+
 #start:checked ~ #lap_1:not(:checked) ~ .controls label[for="lap_1"],
 #start:checked ~ #lap_1:checked + #lap_2:not(:checked) ~ .controls label[for="lap_2"],
 #start:checked ~ #lap_2:checked + #lap_3:not(:checked) ~ .controls label[for="lap_3"],
 #start:checked ~ #lap_3:checked + #lap_4:not(:checked) ~ .controls label[for="lap_4"],
 #start:checked ~ #lap_4:checked ~ .controls label[for="lap_4"],
+
 #stop:checked ~ .controls label[for="start"],
 #stop:checked ~ .controls label[for="reset"],
+
 #init:checked ~ .controls label[for="start"],
 #init:checked ~ .controls label[for="lap_1"] {
   display: block;
 }
 
 /* Disable lap control conditions */
-#init:checked ~ .controls::before,
+/*#init:checked ~ .controls::before,
 #start:checked ~ #lap_4:checked ~ .controls::before {
   display: block;
-}
+}*/
 
 
 /* Visible lap conditions */
-.laps li:first-child time,
+/*.laps li:first-child time,
 .laps li:first-child::before,
 #lap_1:checked ~ .laps li:nth-child(2) time,
 #lap_1:checked ~ .laps li:nth-child(2)::before,
@@ -252,27 +255,27 @@ label[for="stop"] {
 }*/
 
 /* Reset */
-#init:checked ~ time,
+/*#init:checked ~ time,
 #init:checked ~ .laps li time {
   animation-name: none;
-}
+}*/
 
-#init:not(:checked) ~ time,
+/*#init:not(:checked) ~ time,
 #init:not(:checked) ~ .laps li time {
   animation-name: digit;
-}
+}*/
 
 /* Timer / Lap running conditions */
-#start:checked ~ time,
+/*#start:checked ~ time,
 #start:checked ~ #lap_1:not(:checked) ~ .laps li:first-child time,
 #start:checked ~:checked + #lap_2:not(:checked) ~ .laps li:nth-child(2) time,
 #start:checked ~:checked + #lap_3:not(:checked) ~ .laps li:nth-child(3) time,
 #start:checked ~:checked + #lap_4:not(:checked) ~ .laps li:nth-child(4) time {
   animation-play-state: running;
-}
+}*/
 
 /* Timer / Lap stopping conditions */
-#stop:checked ~ time,
+/*#stop:checked ~ time,
 #stop:checked ~ .laps li time,
 #start:checked ~ #lap_1:checked ~ .laps li:first-child time,
 #start:checked ~ #lap_2:checked ~ .laps li:nth-child(2) time,
@@ -280,14 +283,13 @@ label[for="stop"] {
 #start:checked ~ #lap_4:checked ~ .laps li:nth-child(4) time {
   color: #fff;
   animation-play-state: paused;
-}
+}*/
 
-@keyframes digit {
+/*@keyframes digit {
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(calc(-100% + 1em));
   }
-}
-
+}*/

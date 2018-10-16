@@ -11,7 +11,7 @@
 <!-- Local CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/timerStopwatch.css">
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/timerApple.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/timerApple.css">
 	
 <!-- COUNT UP TIMER -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
@@ -25,52 +25,78 @@
  <body onload="digi(), digi1()">
   	
 <!-- CONTAINER -->
-  	<div class="container text-center"><br>
+<div class="container-fluid text-center" style="min-height:400px"><br>
 
-<div class="row">
-
+	<div class="row">
 	<!-- TODAY'S TIME -->
-
-	<div class="col-lg-4 col-md-6 col-sm-10"> 
-		<div id="time" style="padding-bottom:1px;"></div>
-		<div id="time1" style="padding-bottom:1px;"></div>
-	<div id="countUpTimer" style="padding-bottom:1px;">00:00:00</div>
-	</div>
-
-
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+				<div id="time1" style="padding-bottom:1px;"></div>
+				<div id="time" style="padding-bottom:1px;"></div>
+			</div>
 	<!-- TODAY'S DATE -->
-	<div class="col-lg-8 col-md-6 col-sm-12">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<div id="date" style="padding-bottom:1px;"></div>
+				<div id="countUpTimer" style="padding-bottom:1px;">00:00:00</div>
+			</div>
+	</div> <!-- End Row -->
+</div> <!-- End Container -->
 
-			<div id="date" style="padding-bottom:1px;"></div>
-
-		<!-- STOPWATCH -->
-		<div class="stopwatch" style="padding-bottom:10px;"><div id="timerBackground">
-		  	<p style='font-size:1.3em;color:white;font-weight:200;margin:0px;padding-top:10px;'>Timer<p>
-			<span class="time">00:00:00:00</span>
+<!-- INPUT BAR -->
+<div class="container">
+		<div class="input-group mb-3 col-lg-8 offset-lg-2">
+		  <input type="text" class="form-control" placeholder="Enter A Task" aria-label="Enter A Task" aria-describedby="basic-addon2">
+		  <div class="input-group-append">
+		    <button class="btn btn-success" id="add" type="button">+</button>
 		  </div>
-		  
-		  <button class="start" style='border-radius:5px'>Start</button>
-		  <button class="pause" style='border-radius:5px'>Stop</button>
-		  <button class="reset" style='border-radius:5px'>Reset</button>
-		  <button style="display: none;" class="lap">Lap</button>
 		</div>
-
-	</div>
-
-		
-
-		<div class="lapsBox">
-		  <ul class="laps">
-
-		  </ul>
-		  <button class="clear">Clear Laps</button>
-		</div>
-
-		
-		<!-- STOPWATCH -->
-
 </div>
 
+
+
+
+
+
+
+		<!-- STOPWATCH -->
+<!--		<div class="stopwatch" style="padding-bottom:3px;"><div id="timerBackground">
+		  	<p style='font-size:1.3em;color:white;font-weight:200;margin:0px;padding-top:10px;'>Timer<p>
+
+			<span class="time">00:00:00:00</span>
+
+			<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-6 offset-xs-2">
+				<input type="radio" id="init" name="control" checked="checked">
+				<input type="radio" id="stop" name="control">
+				<input type="radio" class="start1" id="start" name="control">
+		  		<input type="reset" id="reset" name="control">
+		  	    <input type="checkbox" id="lap_1" name="lap">
+
+				  <div class="controls">
+					  <label for="stop">Stop</label>
+					  <label for="start" id="start">Start</label>
+					  <label for="reset">Reset</label>
+					  <label for="lap_1">Lap</label>
+				  </div>
+
+			</div> -->
+		  
+<!-- 		  <button class="start" style='display: none;border-radius:5px'>Start</button>
+		  <button class="pause" style='display: none;border-radius:5px'>Stop</button>
+		  <button class="reset" style='display: none;border-radius:5px'>Reset</button>
+		  <button style="display: none;" class="lap">Lap</button> -->
+<!-- 		</div>
+
+	</div> -->
+
+		<!-- <div class="lapsBox"> -->
+<!-- 		  <ul class="laps"></ul> -->
+
+<!-- 		  <button style="display: none;" class="clear">Clear Laps</button>
+		</div> -->
+
+		
+		<!-- STOPWATCH -->
+
+<!-- </div> -->
 
 
 
@@ -136,15 +162,10 @@
 
 
 <!-- TABLE -->
+<!-- <br>
 
 
-
-
-
-<br>
-
-
-
+<div class="container">
 <div id="tableBackground">
 	<table class="table table-bordered table-sm text-center align-middle table-striped">
 		  
@@ -179,7 +200,7 @@
 	    </tr>
 	  </tbody>
 	 </table>
-	</div>
+	</div> -->
 
 
 
@@ -191,7 +212,7 @@
 <!-- BUTTON -->
 
 
-</div> <!-- Close Container -->
+<!-- </div> Close Container -->
 
 
 
@@ -226,11 +247,11 @@
 	<!-- LOCAL MOMENT.JS -->
 	<script type="text/javascript" src="assets/js/todaysDate.js"></script>
 
+	<!-- LOCAL TIMERSTOPWATCH.JS -->
+	<!-- <script type="text/javascript" src="assets/js/timerStopwatch.js"></script> -->
+
 	<!-- LOCAL TIMERCLICKS.JS -->
 	<script type="text/javascript" src="assets/js/timerClicks.js"></script>
-
-	<!-- LOCAL TIMERSTOPWATCH.JS -->
-	<script type="text/javascript" src="assets/js/timerStopwatch.js"></script>
 
 	<!-- LOCAL SCRIPT.JS -->
 	<script type="text/javascript" src="assets/js/table.js"></script>             

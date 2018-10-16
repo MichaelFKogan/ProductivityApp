@@ -17,6 +17,9 @@
       // if ($('#punchin').html() == '') {
          
       stamp1 = moment().format("h:mm:ss A")   
+      $('#punchin').html('')
+      $('#punchout').html('')
+
       $('#punchin').html('<div class="input-group input-group-sm"><input id="input" type="text" class="form-control border-0 rounded-0 text-center" placeholder=" ' + stamp1 + ' " aria-label="Username" aria-describedby="basic-addon1"></div>');
 
 // } else{}
