@@ -1,6 +1,9 @@
 var timer;
+var time;
 var stop = false;
 var play = false;
+var reset = false;
+var interval;
 
 // CURRENT TIMER
 
@@ -8,56 +11,43 @@ var play = false;
     $('#start1').click(function(e) {
 
 // COUNT UP TIMER
+        function startTimer()
+        {
+            var startTimestamp = moment().startOf("day");
+                interval = setInterval(function() {
+                startTimestamp.add(1, 'second');
+                document.getElementById('timer1').innerHTML = startTimestamp.format('HH:mm:ss');
+            }, 1000);
+        }
+        startTimer();
+// COUNT UP TIMER
 
-function startTimer()
-{
-    var startTimestamp = moment().startOf("day");
-    
-    setInterval(function() {
-        
-        startTimestamp.add(1, 'second');
-        
-        document.getElementById('timer1').innerHTML = startTimestamp.format('HH:mm:ss');
-    }, 1000);
-}
-
-startTimer();
-
-        
-        if(stop==false && play==false){
-        //ADD TIME STAMP
-            var stamp1 = moment().format("h:mm:ss A");
-        // TIME STAMP
-            $('#startTime1').html(stamp1); 
-        } 
-
-        if(stop==false && play==false || play==true){
-        // CLOCK
+// CLOCK COUNTING UP
+            var stamp1 = moment().format("h:mm A");
             function displayTime() {
-                var time = moment().format('h:mm:ss A');
+            var time = moment().format('h:mm A');
                 timer = setTimeout(displayTime, 1000);
-                $('#stopTime1').html(time);
+                $('#startTime1').html(stamp1+' - '+time); 
             }
             $(document).ready(function() {
-                displayTime();
-            });
-        }
-        stop = false;
-        play = true;
-    });
+                displayTime();});
+                    //ADD TIME STAMP AND CLOCK
+
+        // START
+
+// CLOCK COUNTING UP
+        
+    }); //END START CLICK
 
 
 
 // ON STOP
 //ADD FINISHED TIMESTAMP  
       $('#stop1').click(function() {
-        if(stop==false){
       clearTimeout(timer);
+      clearInterval(interval);
       var stamp3 = moment().format("h:mm:ss A")
       $('#stopTime1').html(stamp3);
-      stop = true;
-      play = true;
-      }
       });
 
 
@@ -66,10 +56,13 @@ startTimer();
 // RESET FIELDS
       $('#reset1').click(function() {
       clearTimeout(timer);
-      $('#startTime1').html('')
-      $('#stopTime1').html('')
+      clearInterval(interval);
+      $('#startTime1').html('');
+      $('#stopTime1').html('');
+      $('#timer1').html('');
       stop = false;
       play = false;
+      reset = true;
       });
 
 
