@@ -9,6 +9,8 @@ $(document).ready(function() {
     displayTime();
 });
 
+
+
 // COUNT UP TIMER
 
 function startTimer()
@@ -26,10 +28,14 @@ function startTimer()
 
 startTimer();
 
+
+
 // LOG IN TIME
 var logInTime = moment().format("hh:mm A");
 
       $('#logInTime').html("<p style='font-size:.40em;margin:0px;padding-top:15px;'>Log In Time<p>" + logInTime);
+
+
 
 // TODAY'S DATE
 
