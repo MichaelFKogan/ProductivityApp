@@ -1,3 +1,23 @@
+// MOMENT COUNTERS PRACTICE
+
+// var now = moment(); // new Date().getTime();
+// var then = moment().add(50400, 'seconds'); // new Date(now + 60 * 1000);
+
+// $(".now").text(moment(now).format('h:mm:ss a'));
+// $(".then").text(moment(then).format('h:mm:ss a'));
+// $(".duration").text(moment(now).to(then));
+
+// (function timerLoop() {
+//   $(".difference > span").text(moment().to(then));
+//   $("#moment").text(countdown(then).toString());
+//   requestAnimationFrame(timerLoop);
+// })();
+
+
+
+
+// ADDING NEW ROWS WITH + BUTTON
+
 var pressed; 
 var pressed = false;
 
@@ -18,3 +38,5 @@ else{
 
 
 });
+
+// ADDING NEW ROWS WITH + BUTTON
