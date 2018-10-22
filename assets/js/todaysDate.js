@@ -49,3 +49,17 @@ startTimer();
 
 
 
+// CURRENT TIME --------
+function displayTime1() {
+    var time = moment().endOf("day").format('hh:mm:ss A');
+
+    $('#timeToMidnight1').html("<p style='font-size:.40em;margin:0px;padding-top:15px;'>Time<p>" + time);
+
+    setTimeout(displayTime1, 1000);
+}
+
+$(document).ready(function() {
+    displayTime1();
+});
+// CURRENT TIME --------
+

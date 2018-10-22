@@ -55,7 +55,7 @@
 
 		var counter = byId('counter'),
 			timespan = byId('timespan'),
-			msg = ts.toHTML('strong', empty);
+			msg = ts.toHTML(empty);
 
 		if (start.getTime() === DEMO_MS) {
 			msg = (ts.value > 0) ?
@@ -64,18 +64,14 @@
 		}
 
 		counter.innerHTML = msg;
-		// timespan.innerHTML = JSON.stringify(ts, null, '  ');
 
 		// update timezone label
 		var tz = start.getTimezoneOffset();
 		if (tz) {
 			var tzh = Math.floor(Math.abs(tz) / 60),
 				tzm = (Math.abs(tz) % 60);
-			// byId('timezone').innerHTML = 'UTC'+((tz > 0) ? '-' : '+')+formatTens(tzh)+':'+formatTens(tzm);
 
-		} else {
-			// byId('timezone').innerHTML = 'UTC';
-		}
+		} else {}
 
 		requestAnimationFrame(update, timespan.parentNode);
 	}

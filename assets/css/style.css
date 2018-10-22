@@ -27,7 +27,7 @@ h1{
     background-color: rgba(0,0,0,0.3);
 }
 
-#todaysDate, #logInTime, #currentTime, #countUpTimer {
+#todaysDate, #logInTime, #currentTime, #countUpTimer, #minutesInADay, #timeToMidnight, #timeToMidnight1, #timeToMidnight2 {
   font-size:3em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -41,10 +41,10 @@ h1{
 }
 
 #counter {
-  font-size:.40em;
+  font-size:.7em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  background-color: rgba(0,0,0,0.3);
+  /*background-color: rgba(0,0,0,0.3);*/
   color: white;
 }
 
